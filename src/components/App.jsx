@@ -6,10 +6,10 @@ import { scrollOnLoadMore } from 'utils/scrollOnLoadMore';
 export const App = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
-  const [filter, setFilter] = useState('All');
+
   const [showLoadMore, setShowLoadMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [filter] = useState('All');
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
@@ -59,22 +59,22 @@ export const App = () => {
   const filteredUsers = useMemo(() => {
     let filtered = users;
 
-    switch (filter) {
-      case 'All':
-        break;
+    // switch (filter) {
+    //   case 'All':
+    //     break;
 
-      case 'Follow':
-        filtered = filtered.filter(user => !user.following);
-        break;
+    //   case 'Follow':
+    //     filtered = filtered.filter(user => !user.following);
+    //     break;
 
-      case 'Followings':
-        filtered = filtered.filter(user => user.following);
-        break;
+    //   case 'Followings':
+    //     filtered = filtered.filter(user => user.following);
+    //     break;
 
-      default:
-        filtered;
-        break;
-    }
+    //   default:
+    //     filtered;
+    //     break;
+    // }
 
     const endIndex = page * 3;
     setShowLoadMore(endIndex);
