@@ -9,7 +9,7 @@ export const App = () => {
 
   const [showLoadMore, setShowLoadMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [filter] = useState('All');
+  // const [filter] = useState('All');
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
@@ -79,7 +79,7 @@ export const App = () => {
     const endIndex = page * 3;
     setShowLoadMore(endIndex);
     return filtered.slice(0, endIndex);
-  }, [filter, page, users]);
+  }, [page, users]);
 
   const handleBtnLoadMore = () => {
     setPage(prevPage => prevPage + 1);
