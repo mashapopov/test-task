@@ -52,9 +52,9 @@ export const App = () => {
     }
   }, []);
 
-  const handleFilterChange = useCallback(filterValue => {
-    setFilter(filterValue);
-  }, []);
+  // const handleFilterChange = useCallback(filterValue => {
+  //   setFilter(filterValue);
+  // }, []);
 
   const filteredUsers = useMemo(() => {
     let filtered = users;
