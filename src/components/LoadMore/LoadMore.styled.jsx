@@ -8,10 +8,10 @@ export const Button = styled.button`
 
   border-radius: 10px;
   border: none;
-
+  background-color: #ebd8ffae;
   transition: background-color 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :hover {
-    background-color: #ebd8ffae;
+    background-color: #5cd3a8;
   }
 `;

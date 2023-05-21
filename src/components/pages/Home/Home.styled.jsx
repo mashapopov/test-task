@@ -8,7 +8,7 @@ export const Main = styled.main`
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 88px;
+  font-size: 58px;
   line-height: 22px;
   /* identical to box height */
 
